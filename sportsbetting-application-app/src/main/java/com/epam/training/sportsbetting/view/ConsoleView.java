@@ -10,12 +10,15 @@ import com.epam.training.sportsbetting.domain.Outcome;
 import com.epam.training.sportsbetting.domain.Player;
 import com.epam.training.sportsbetting.domain.User;
 import com.epam.training.sportsbetting.domain.Wager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ConsoleView implements View {
     public static final String QUIT = "q";
     private final ConsoleIO defaultConsoleIO;
 
-    public ConsoleView(final ConsoleIO consoleIO) {
+    public ConsoleView(@Autowired final ConsoleIO consoleIO) {
         defaultConsoleIO = consoleIO;
     }
 

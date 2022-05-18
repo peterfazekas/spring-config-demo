@@ -7,12 +7,16 @@ import com.epam.training.sportsbetting.service.AuthenticationException;
 import com.epam.training.sportsbetting.service.SportsBettingService;
 import com.epam.training.sportsbetting.service.strategy.WinStrategy;
 import com.epam.training.sportsbetting.view.View;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class Supporter {
     private final View view;
     private final SportsBettingService sportsBettingService;
 
-    public Supporter(View view, SportsBettingService sportsBettingService) {
+    public Supporter(@Autowired View view,
+                     @Autowired SportsBettingService sportsBettingService) {
         this.view = view;
         this.sportsBettingService = sportsBettingService;
     }

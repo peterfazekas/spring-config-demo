@@ -1,8 +1,11 @@
 package com.epam.training.sportsbetting.view;
 
+import org.springframework.stereotype.Component;
+
 import java.io.InputStream;
 import java.util.Scanner;
 
+@Component
 public class DefaultConsoleIO implements ConsoleIO {
 
     @Override

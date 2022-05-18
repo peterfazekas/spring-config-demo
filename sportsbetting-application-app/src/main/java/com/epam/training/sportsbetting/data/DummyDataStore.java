@@ -14,7 +14,9 @@ import com.epam.training.sportsbetting.domain.Outcome;
 import com.epam.training.sportsbetting.domain.Player;
 import com.epam.training.sportsbetting.domain.SportEvent;
 import com.epam.training.sportsbetting.domain.Wager;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DummyDataStore {
     public static final int YEAR = 2016;
     public static final int MONTH = 10;

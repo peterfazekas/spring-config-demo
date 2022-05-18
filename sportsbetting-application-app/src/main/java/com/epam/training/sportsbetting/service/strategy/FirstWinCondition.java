@@ -6,7 +6,11 @@ import java.util.stream.Collectors;
 import com.epam.training.sportsbetting.domain.Bet;
 import com.epam.training.sportsbetting.domain.Outcome;
 import com.epam.training.sportsbetting.domain.Wager;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
+@Qualifier("FirstWinCondition")
 public class FirstWinCondition implements WinStrategy {
     @Override
     public void setWinCondition(List<Bet> bets, Wager wager) {

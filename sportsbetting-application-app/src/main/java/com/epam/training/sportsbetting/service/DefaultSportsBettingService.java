@@ -13,12 +13,15 @@ import com.epam.training.sportsbetting.domain.Wager;
 import com.epam.training.sportsbetting.domain.WagerBuilder;
 import com.epam.training.sportsbetting.service.strategy.WinStrategy;
 import com.epam.training.sportsbetting.view.View;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DefaultSportsBettingService implements SportsBettingService {
 
     private final DummyDataStore dataStore;
 
-    public DefaultSportsBettingService(final DummyDataStore dataStore) {
+    public DefaultSportsBettingService(@Autowired final DummyDataStore dataStore) {
         this.dataStore = dataStore;
     }
 
