@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="view" class="com.epam.training.sportsbetting.view.ConsoleView">
+        <constructor-arg>
+            <bean class="com.epam.training.sportsbetting.view.DefaultConsoleIO" />
+        </constructor-arg>
+    </bean>
+    <bean id="sportsBettingService" class="com.epam.training.sportsbetting.service.DefaultSportsBettingService">
+        <constructor-arg>
+            <bean class="com.epam.training.sportsbetting.data.DummyDataStore"/>
+        </constructor-arg>
+    </bean>
+    <bean id="supporter" class="com.epam.training.sportsbetting.Supporter">
+        <constructor-arg ref="view"/>
+        <constructor-arg ref="sportsBettingService"/>
+    </bean>
+    <bean id="ass" class="com.epam.training.sportsbetting.App">
+        <constructor-arg ref="supporter"/>
+        <constructor-arg>
+            <bean class="com.epam.training.sportsbetting.service.strategy.FirstWinCondition" />
+        </constructor-arg>
+    </bean>
+</beans>
