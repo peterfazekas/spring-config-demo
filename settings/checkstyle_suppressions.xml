@@ -1,0 +1,19 @@
+<?xml version="1.0"?> <!DOCTYPE suppressions PUBLIC "-//Puppy Crawl//DTD Suppressions 1.1//EN" "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+<suppressions>
+	<suppress checks="." files=".+\.(?:png|gif|jpg|jpeg)$" />
+	
+	
+
+	<!-- Clean code functions -->
+	<suppress id="InvalidLoggingMethod_Error" files="[\\/]com.epam.training.exercise*\.java$" />
+	
+	<!-- Snake application -->
+	<suppress checks="." files="[\\/]com.epam.training.snake.controller[\\/].*\.java$" />
+	<suppress checks="." files="[\\/]com.epam.training.snake.model[\\/].*\.java$" />
+	<suppress checks="." files="[\\/]com.epam.training.snake.view[\\/].*\.java$" />
+	
+	<!-- Sportsbetting application -->	
+	<suppress checks="JavadocMethod" files="[\\/]com.epam.training.sportsbetting.config[\\/].*\.java$" />
+	<suppress checks="JavadocMethod" files=".*[/\\]*Test.java" />
+	<suppress id="InvalidLoggingMethod_Error" files="[\\/]com.epam.training.sportsbetting.view[\\/].*\.java$" />
+</suppressions>
